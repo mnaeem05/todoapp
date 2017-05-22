@@ -24,8 +24,9 @@
                 document.getElementById("tableId").innerHTML += "<tr><th></th><th></th><th></th></tr>";
             } else newArray = [];
             // loop in array to show all names
-            for (var i = 1; i < newArray.length; i++) {
-                document.getElementById("tableId").innerHTML += "<tr><td>" + i + "-</td><td>" + newArray[i] + "<td><button class='box003' onClick=editRow(" + i + ")>Edit</button></td></td><td><button class='box003' onClick=deleteRow(" + i + ")>Delete</button></td></tr>";
+            for (var i = 0; i < newArray.length; i++) {
+                serial = i + 1
+                document.getElementById("tableId").innerHTML += "<tr><td>" + serial + "-</td><td>" + newArray[i] + "<td><button class='box003' onClick=editRow(" + i + ")>Edit</button></td></td><td><button class='box003' onClick=deleteRow(" + i + ")>Delete</button></td></tr>";
             }
         }
         // remove particular row from table and name from localStorage
